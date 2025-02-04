@@ -1,0 +1,14 @@
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/DLinkSDK/deeplink-dev-specs.git'
+
+platform :ios, '13.0'
+
+target 'AppAttributionDemo' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for AppAttributionDemo
+  pod 'AppAttribution', '2.0.0'
+  
+  pod 'AppsFlyerFramework', '6.12.1'
+end
