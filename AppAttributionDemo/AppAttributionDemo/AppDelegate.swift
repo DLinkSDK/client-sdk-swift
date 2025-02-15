@@ -13,6 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        // you can set you project-applied custom deviceid
+        // or use the device id we generate for you
+        AttributionManager.setCustomDeviceId("your device id here")
         // create your configuration
         let configuration = AttributionConfiguration(appId: "your_app_id")
         AttributionManager.setup(configuration: configuration, delegate: self) // set your appid
