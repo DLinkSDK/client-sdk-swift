@@ -10,19 +10,15 @@ import AppTrackingTransparency
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        // you can set you project-applied custom deviceid
-        AttributionManager.setCustomDeviceId("your device id here")
         // create your configuration
         let configuration = AttributionConfiguration(appId: "your_app_id")
-        AttributionManager.setup(configuration: configuration, delegate: self) // 设置appid
+        AttributionManager.setup(configuration: configuration, delegate: self) // set your appid
         // start attribution manager
         AttributionManager.start()
-        
+                
         // you can call AttributionManager.readyToReport to
         // report your app attribution immediately
         // but we strongly recommend you to call readyToReport
