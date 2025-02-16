@@ -6,6 +6,7 @@
 import UIKit
 import AppAttribution
 import AppTrackingTransparency
+import AppsFlyerLib
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // or use the device id we generate for you
         AttributionManager.setCustomDeviceId("your device id here")
         // create your configuration
-        let configuration = AttributionConfiguration(appId: "your_app_id")
+        var configuration = AttributionConfiguration(appId: "your_app_id")
+        // if you want to support appsflyerlib
+        // setup adapter here
+        configuration.appsFlyerAdapter = self
+        
         AttributionManager.setup(configuration: configuration, delegate: self) // set your appid
         // start attribution manager
         AttributionManager.start()
@@ -88,5 +93,28 @@ extension AppDelegate: AttributionManagerDelegate {
     
     func appAttributionDidFail(error: any Error) {
         print("attribution failed \(error)")
+    }
+}
+
+// MARK: - AppsFlyerAdapter
+extension AppDelegate: AppsFlyerAdapter {
+    func startAppsFlyerLib() {
+        // Start Your AppsFlyerLib Here
+        
+        AppsFlyerLib.shared().appsFlyerDevKey = "your_apps_flyer_dev_key"
+        AppsFlyerLib.shared().appleAppID = "your_apps_app_id"
+        AppsFlyerLib.shared().start()
+    }
+}
+
+// MARK: - AppsFlyerLibDelegate
+extension AppDelegate: AppsFlyerLibDelegate {
+    func onConversionDataSuccess(_ conversionInfo: [AnyHashable : Any]) {
+        // callback to AttributionManager with appsflyer result
+        AttributionManager.onAppflyerConversionDataSuccess(conversionInfo)
+    }
+    
+    func onConversionDataFail(_ error: any Error) {
+        print("appsflyerlib failed \(error)")
     }
 }

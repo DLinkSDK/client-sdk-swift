@@ -9,4 +9,6 @@ target 'AppAttributionDemo' do
 
   # Pods for AppAttributionDemo
   pod 'AppAttribution', '2.0.0'
+  
+  pod 'AppsFlyerFramework', '6.12.1'
 end
