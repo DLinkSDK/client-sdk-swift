@@ -1,26 +1,26 @@
 # client-sdk-swift
 
-##Step 1: Get the Appid
+## Step 1: Get the Appid
 
 Register an account at [https://console.dlink.cloud/](https://console.dlink.cloud). After creating an app on the platform, get the corresponding Appid of the app.
 
-##Step 2: Get the SDK
+## Step 2: Get the SDK
 
-###(1) Add Pod source in you Pod file
+### (1) Add Pod source in you Pod file
 
 ```Ruby
 source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/DLinkSDK/deeplink-dev-specs.git'
 ```
 
-###(2) add dependency
+### (2) add dependency
 ```Ruby
 pod 'AppAttribution'
 ```
 
-##Step 3: Initialize the SDK 
+## Step 3: Initialize the SDK 
 
-###(1) configure and setup AttributionManager and start it
+### (1) configure and setup AttributionManager and start it
 ```swift
 import AppAttribution
 
@@ -38,14 +38,14 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-###(2) **[!! IMPORTANT !!] Allow to make app attribution report**
+### (2) **[!! IMPORTANT !!] Allow to make app attribution report**
 ```swift
 // if you're ready to report app attribution, call readyToReport to start the process
 // strongly recommended to begin report after you get your att auth
 
 AttributionManager.readyToReport()
 ```
-###(3) implement the delegate
+### (3) Implement the delegate
 ```swift
 extension AppDelegate: AttributionManagerDelegate {
     func appAttributionDidFinish(matched: Bool, info: [String : Any]) {
@@ -68,7 +68,7 @@ extension AppDelegate: AttributionManagerDelegate {
 }
 ```
 
-###(4) Directly obtain attribution results
+### (4) Directly obtain attribution results
 
 You may also obtain the attribution result by attributionInfo API.
 Remeber it's only available after you have finished your attribution process, or else you can only get an nil result
@@ -76,16 +76,16 @@ Remeber it's only available after you have finished your attribution process, or
 let info = AttributionManager.attributionInfo
 print("attribution info \(info)")
 ```
-##Step 4: AppsFlyerLib Support
+## Step 4: AppsFlyerLib Support
 If your app supports AppsFlyerLib, follow the next steps
-###(1) Setup adapter in configuration
+### (1) Setup adapter in configuration
 ```swift
         var configuration = AttributionConfiguration(appId: "your_app_id")
         configuration.appsFlyerAdapter = self      // set AppsFlyerAdapter
         AttributionManager.setup(configuration: configuration, delegate: self) // set 
 ``` 
 
-###(2) Implements AppsFlyerAdapter Protocol
+### (2) Implements AppsFlyerAdapter Protocol
 ```swift
 extension AppDelegate: AppsFlyerAdapter {
     func startAppsFlyerLib() {
@@ -98,7 +98,7 @@ extension AppDelegate: AppsFlyerAdapter {
 }
 ```
 
-###(3) Pass AppsFlyerLib conversation data to AttributionManager
+### (3) Pass AppsFlyerLib conversation data to AttributionManager
 **This step is very important!**
 ```swift
 extension AppDelegate: AppsFlyerLibDelegate {
