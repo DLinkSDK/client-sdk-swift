@@ -45,7 +45,19 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
 AttributionManager.readyToReport()
 ```
-### (3) Implement the delegate
+### (3) [Optional] UniversalLink
+pass the universal link info to AttributionManager in UIApplicationDelegate
+```swift
+func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([any UIUserActivityRestoring]?) -> Void) -> Bool {
+    // If you use universal link to open your app
+    // pass the info to AttributionManager
+    AttributionManager.application(application: application, continue: userActivity, restorationHandler: restorationHandler)
+    return true
+}
+
+```
+
+### (4) Implement the delegate
 ```swift
 extension AppDelegate: AttributionManagerDelegate {
     func appAttributionDidFinish(matched: Bool, info: [String : Any]) {
@@ -65,10 +77,16 @@ extension AppDelegate: AttributionManagerDelegate {
     func appAttributionDidFail(error: any Error) {
         print("attribution failed \(error)")
     }
+    
+    func appAttributionDidReceiveUniversalLinkInfo(_ info: [String : Any]) {
+        // universal link info
+        print("get info from universal link \(info)")
+    }
+
 }
 ```
 
-### (4) Directly obtain attribution results
+### (5) Directly obtain attribution results
 
 You may also obtain the attribution result by attributionInfo API.
 Remeber it's only available after you have finished your attribution process, or else you can only get an nil result
