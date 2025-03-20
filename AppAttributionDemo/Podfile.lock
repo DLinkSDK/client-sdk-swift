@@ -1,0 +1,43 @@
+PODS:
+  - Alamofire (5.10.2)
+  - AppAttribution (2.1.0):
+    - Alamofire
+    - CocoaAsyncSocket
+    - MMKV
+    - SweetSugar (>= 1.1.1)
+  - AppsFlyerFramework (6.12.1):
+    - AppsFlyerFramework/Main (= 6.12.1)
+  - AppsFlyerFramework/Main (6.12.1)
+  - CocoaAsyncSocket (7.6.5)
+  - MMKV (2.1.0):
+    - MMKVCore (~> 2.1.0)
+  - MMKVCore (2.1.1)
+  - SweetSugar (1.1.1)
+
+DEPENDENCIES:
+  - AppAttribution (~> 2.1.0)
+  - AppsFlyerFramework (= 6.12.1)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - AppsFlyerFramework
+    - CocoaAsyncSocket
+    - MMKV
+    - MMKVCore
+    - SweetSugar
+  https://github.com/DLinkSDK/deeplink-dev-specs.git:
+    - AppAttribution
+
+SPEC CHECKSUMS:
+  Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
+  AppAttribution: d00fe551dafede2abfac0a3568388ac53276cc28
+  AppsFlyerFramework: e29b63fc5441400a38a31c5501c1da500b9d53d0
+  CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
+  MMKV: ce484c1ac40bf76d5f09a0195d2ec5b3d3840d55
+  MMKVCore: 1eb661c6c498ab88e3df9ce5d8ff94d05fcc0567
+  SweetSugar: 40d60b273b866b8d69d177a62c45b9e4b93cb03c
+
+PODFILE CHECKSUM: f9f9f344ecb19d37731b8be7cb0a2a58f74bd2b3
+
+COCOAPODS: 1.16.2

@@ -58,6 +58,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([any UIUserActivityRestoring]?) -> Void) -> Bool {
+        // If you use universal link to open your app
+        // pass the info to AttributionManager
+        AttributionManager.application(application: application, continue: userActivity, restorationHandler: restorationHandler)
+        return true
+    }
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
@@ -77,6 +84,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 // MARK: - AttributionManagerDelegate
 extension AppDelegate: AttributionManagerDelegate {
+    func appAttributionDidReceiveUniversalLinkInfo(_ info: [String : Any]) {
+        // universal link info
+        print("get info from universal link \(info)")
+    }
+    
     func appAttributionDidFinish(matched: Bool, info: [String : Any]) {
         // app attribution finished
         if matched {
