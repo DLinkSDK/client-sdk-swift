@@ -1,8 +1,8 @@
 # client-sdk-swift
 
-## Step 1: Get the Appid
+## Step 1: Get the AccountId
 
-Register an account at [https://console.dlink.cloud/](https://console.dlink.cloud). After creating an app on the platform, get the corresponding Appid of the app.
+Register an account at [https://console.dlink.cloud/](https://console.dlink.cloud). After creating an app on the platform, get the corresponding AccountId of the app.
 
 ## Step 2: Get the SDK
 
@@ -29,7 +29,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     // you can set you project-applied custom deviceid
     AttributionManager.setCustomDeviceId("your device id here")
     // create your configuration
-    let configuration = AttributionConfiguration(appId: "your_app_id")
+    let configuration = AttributionConfiguration(appId: "your_account_id")
     AttributionManager.setup(configuration: configuration, delegate: self) // setup your appid
     // start attribution manager
     AttributionManager.start()
