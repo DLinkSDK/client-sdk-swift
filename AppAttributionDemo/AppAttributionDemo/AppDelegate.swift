@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // or use the device id we generate for you
         AttributionManager.setCustomDeviceId("your device id here")
         // create your configuration
-        var configuration = AttributionConfiguration(appId: "your_app_id")
+        var configuration = AttributionConfiguration(accountId: "your_account_id", devToken: "your_dev_token")
         // if you want to support appsflyerlib
         // setup adapter here
         configuration.appsFlyerAdapter = self
@@ -117,6 +117,14 @@ extension AppDelegate: AppsFlyerAdapter {
         AppsFlyerLib.shared().appleAppID = "your_apps_app_id"
         AppsFlyerLib.shared().start()
     }
+    
+    func getAppsFlyerUID() -> String {
+        return AppsFlyerLib.shared().getAppsFlyerUID()
+    }
+    
+    func logEvent(_ eventName: String, withValues values: [AnyHashable : Any]?) {
+        AppsFlyerLib.shared().logEvent(eventName, withValues: values)
+    }
 }
 
 // MARK: - AppsFlyerLibDelegate
@@ -127,6 +135,6 @@ extension AppDelegate: AppsFlyerLibDelegate {
     }
     
     func onConversionDataFail(_ error: any Error) {
-        print("appsflyerlib failed \(error)")
+        AttributionManager.onAppflyerConversionDataFail(error)
     }
 }

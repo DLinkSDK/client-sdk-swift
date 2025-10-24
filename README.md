@@ -1,6 +1,6 @@
 # client-sdk-swift
 
-## Step 1: Get the AccountId
+## Step 1: Get the AccountId and DevToken
 
 Register an account at [https://console.dlink.cloud/](https://console.dlink.cloud). After creating an app on the platform, get the corresponding AccountId of the app.
 
@@ -29,7 +29,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     // you can set you project-applied custom deviceid
     AttributionManager.setCustomDeviceId("your device id here")
     // create your configuration
-    let configuration = AttributionConfiguration(appId: "your_account_id")
+        var configuration = AttributionConfiguration(accountId: "your_account_id", devToken: "your_dev_token")
     AttributionManager.setup(configuration: configuration, delegate: self) // setup your appid
     // start attribution manager
     AttributionManager.start()
@@ -113,6 +113,14 @@ extension AppDelegate: AppsFlyerAdapter {
         AppsFlyerLib.shared().appleAppID = "your_apps_app_id"
         AppsFlyerLib.shared().start()
     }
+        
+    func getAppsFlyerUID() -> String {
+        return AppsFlyerLib.shared().getAppsFlyerUID()
+    }
+    
+    func logEvent(_ eventName: String, withValues values: [AnyHashable : Any]?) {
+        AppsFlyerLib.shared().logEvent(eventName, withValues: values)
+    }
 }
 ```
 
@@ -127,7 +135,7 @@ extension AppDelegate: AppsFlyerLibDelegate {
     }
     
     func onConversionDataFail(_ error: any Error) {
-        print("appsflyerlib failed \(error)")
+        AttributionManager.onAppflyerConversionDataFail(error)
     }
 }
 
