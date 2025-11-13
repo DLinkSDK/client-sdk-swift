@@ -18,11 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // or use the device id we generate for you
         AttributionManager.setCustomDeviceId("your device id here")
         // create your configuration
-        var configuration = AttributionConfiguration(accountId: "your_account_id", devToken: "your_dev_token")
+        // appleStoreId is your app id in AppleStore
+        var configuration = AttributionConfiguration(accountId: "your_account_id", devToken: "your_dev_token", appleStoreId: "idxxxxxxx")
         // if you want to support appsflyerlib
         // setup adapter here
         configuration.appsFlyerAdapter = self
-        
+        configuration.logEnabled = true
+        AttributionManager.logDelegate = self
         AttributionManager.setup(configuration: configuration, delegate: self) // set your appid
         // start attribution manager
         AttributionManager.start()
@@ -105,6 +107,13 @@ extension AppDelegate: AttributionManagerDelegate {
     
     func appAttributionDidFail(error: any Error) {
         print("attribution failed \(error)")
+    }
+}
+
+// MARK: - AppAttribution Log Delegate
+extension AppDelegate: AttributionManagerLogDelegate {
+    func log(message: String) {
+        print(message)
     }
 }
 
