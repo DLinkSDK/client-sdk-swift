@@ -29,7 +29,8 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     // you can set you project-applied custom deviceid
     AttributionManager.setCustomDeviceId("your device id here")
     // create your configuration
-        var configuration = AttributionConfiguration(accountId: "your_account_id", devToken: "your_dev_token")
+    // appleStoreId is your app id in the AppleStore, use format idxxx, like facebook's appleStoreId is id284882215
+        var configuration = AttributionConfiguration(accountId: "your_account_id", devToken: "your_dev_token", appleStoreId: "idxxxxxxx")
     AttributionManager.setup(configuration: configuration, delegate: self) // setup your appid
     // start attribution manager
     AttributionManager.start()

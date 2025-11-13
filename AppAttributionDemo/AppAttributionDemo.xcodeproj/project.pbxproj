@@ -26,6 +26,7 @@
 		7FC761072D5F4A6500FED6AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FC7610A2D5F4A6500FED6AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FC7610C2D5F4A6500FED6AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FEF35462EC5E7D200F9A7DD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = SOURCE_ROOT; };
 		A198746E676B7DD2B58B72D5 /* Pods-AppAttributionDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppAttributionDemo.release.xcconfig"; path = "Target Support Files/Pods-AppAttributionDemo/Pods-AppAttributionDemo.release.xcconfig"; sourceTree = "<group>"; };
 		B260241DCCB141AC8C539EC4 /* Pods_AppAttributionDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppAttributionDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -62,6 +63,7 @@
 		7FC760F22D5F4A6400FED6AD = {
 			isa = PBXGroup;
 			children = (
+				7FEF35462EC5E7D200F9A7DD /* README.md */,
 				7FC760FD2D5F4A6400FED6AD /* AppAttributionDemo */,
 				7FC760FC2D5F4A6400FED6AD /* Products */,
 				50F499FA62CE363F09BAFC1D /* Pods */,
@@ -168,9 +170,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AppAttributionDemo/Pods-AppAttributionDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AppAttributionDemo/Pods-AppAttributionDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
