@@ -147,4 +147,4 @@ extension AppDelegate: AppsFlyerLibDelegate {
 ```
 
 ## Check Detail APIs
-[API Documents](./Docs/APIDoc/documentation/appattribution/index.html)
+[API Documents](https://deeplink-dev-ios.s3.ap-southeast-1.amazonaws.com/ios-frameworks/AppAttribution/docs/documentation/appattribution/index.html)
