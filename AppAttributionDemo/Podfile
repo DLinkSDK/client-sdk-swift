@@ -8,7 +8,7 @@ target 'AppAttributionDemo' do
   use_frameworks!
 
   # Pods for AppAttributionDemo
-  pod 'AppAttribution', '~>3.0.0'
+  pod 'AppAttribution', '~>3.0.1'
   
   pod 'AppsFlyerFramework', '6.12.1'
 end

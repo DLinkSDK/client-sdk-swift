@@ -1,9 +1,9 @@
 PODS:
   - Alamofire (5.10.2)
-  - AppAttribution (3.0.0):
+  - AppAttribution (3.0.1):
     - Alamofire
     - CocoaAsyncSocket
-    - DLinkAuthKit
+    - DLinkAuthKit (>= 1.0.1)
     - MMKV
     - SweetSugar (>= 1.1.1)
   - AppsFlyerFramework (6.12.1):
@@ -11,7 +11,7 @@ PODS:
   - AppsFlyerFramework/Main (6.12.1)
   - CocoaAsyncSocket (7.6.5)
   - CryptoSwift (1.8.4)
-  - DLinkAuthKit (1.0.0):
+  - DLinkAuthKit (1.0.1):
     - CryptoSwift
   - MMKV (2.2.3):
     - MMKVCore (~> 2.2.3)
@@ -19,7 +19,7 @@ PODS:
   - SweetSugar (1.1.1)
 
 DEPENDENCIES:
-  - AppAttribution (~> 3.0.0)
+  - AppAttribution (~> 3.0.1)
   - AppsFlyerFramework (= 6.12.1)
 
 SPEC REPOS:
@@ -37,15 +37,15 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
-  AppAttribution: 8634b118fdaf5ae9b01e923e4084b17cd368ebb6
+  AppAttribution: 3eed2e4815888ed84f1dd77346be1e8b55bc0006
   AppsFlyerFramework: e29b63fc5441400a38a31c5501c1da500b9d53d0
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   CryptoSwift: e64e11850ede528a02a0f3e768cec8e9d92ecb90
-  DLinkAuthKit: 898fd522f5cbffe06d1cf081918faa078bf61182
+  DLinkAuthKit: e9066f09131dff806fb0e107c779329012d64d70
   MMKV: 941e8774da0e6fdf12c6b3fcc833ca687ae5a42d
   MMKVCore: 6d5cc1bacce539f4c974985dfe646fb65a5d27d2
   SweetSugar: 40d60b273b866b8d69d177a62c45b9e4b93cb03c
 
-PODFILE CHECKSUM: c89f1e2f13089f0aecf01085f008c80a4afd639c
+PODFILE CHECKSUM: 0dc0a762698f31b30b342987af23e16ba4632538
 
 COCOAPODS: 1.16.2

@@ -47,7 +47,11 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 AttributionManager.readyToReport()
 ```
 ### (3) [Optional] UniversalLink
-pass the universal link info to AttributionManager in UIApplicationDelegate
+1. check Associated Domains is enabled in your app.
+2. ask DLink to get your applinks domain. add the applinks domain to your Associated Domains.
+3. pass the universal link info to AttributionManager in UIApplicationDelegate
+[How to enable Universal Link](./Docs/UniversalLink.md)
+
 ```swift
 func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([any UIUserActivityRestoring]?) -> Void) -> Bool {
     // If you use universal link to open your app
@@ -141,3 +145,6 @@ extension AppDelegate: AppsFlyerLibDelegate {
 }
 
 ```
+
+## Check Detail APIs
+[API Documents](./Docs/APIDoc/documentation/appattribution/index.html)
