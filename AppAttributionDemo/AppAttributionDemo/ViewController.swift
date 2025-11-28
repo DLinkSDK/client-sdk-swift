@@ -104,7 +104,9 @@ class ViewController: UIViewController {
             currency: "USD",
             value: 9.9 // total price
         )
-        productItem.subscribeDay = 30 // Required!! the period of a subscription.
+        // Required!! set up the period of a subscription.
+        // in other events, if the product is a subscription, you'd better also setup subscribeDay
+        productItem.subscribeDay = 30
         // pass the transactionIdentfier in if it's available.
         LogEvent.shared.logPurchaseSuccess(item: productItem, transactionIdentifier: "subscription_transaction_id")
 
