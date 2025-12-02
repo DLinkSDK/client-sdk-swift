@@ -55,7 +55,7 @@ class ViewController: UIViewController {
         LogEvent.shared.logViewContentEvent(item: productItem)
     }
     
-    private func logAddToCard() {
+    private func logAddToCart() {
         // when the user clicks the "Add to Cart" button.
         let content = generateRandomProductContent(3, price: 10.0)
         let productItem = ProductItem(
@@ -64,6 +64,17 @@ class ViewController: UIViewController {
             value: content.value * Float(content.quantity) // total price
         )
         LogEvent.shared.logAddToCart(item: productItem)
+    }
+    
+    private func logAddToWishlist() {
+        // when the user clicks the "Add to wishlist" button.
+        let content = generateRandomProductContent(3, price: 10.0)
+        let productItem = ProductItem(
+            content: content,
+            currency: "RMB",
+            value: content.value * Float(content.quantity) // total price
+        )
+        LogEvent.shared.logAddToWishList(item: productItem)
     }
     
     private func logInitiateCheckoutEvent() {
