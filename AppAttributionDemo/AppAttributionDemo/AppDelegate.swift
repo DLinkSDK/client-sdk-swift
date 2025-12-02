@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        // you can set you project-applied custom deviceid
+        // [Optional] you can set you project-applied custom deviceid
         // or use the device id we generate for you
         AttributionManager.setCustomDeviceId("your device id here")
         // create your configuration
@@ -121,10 +121,11 @@ extension AppDelegate: AttributionManagerLogDelegate {
 extension AppDelegate: AppsFlyerAdapter {
     func startAppsFlyerLib() {
         // Start Your AppsFlyerLib Here
-        
+        print("start appsflyer")
         AppsFlyerLib.shared().appsFlyerDevKey = "your_apps_flyer_dev_key"
         AppsFlyerLib.shared().appleAppID = "your_apps_app_id"
         AppsFlyerLib.shared().start()
+        AppsFlyerLib.shared().delegate = self
     }
     
     func getAppsFlyerUID() -> String {
@@ -139,11 +140,13 @@ extension AppDelegate: AppsFlyerAdapter {
 // MARK: - AppsFlyerLibDelegate
 extension AppDelegate: AppsFlyerLibDelegate {
     func onConversionDataSuccess(_ conversionInfo: [AnyHashable : Any]) {
+        print("appsflyer get conversion \(conversionInfo)")
         // callback to AttributionManager with appsflyer result
         AttributionManager.onAppflyerConversionDataSuccess(conversionInfo)
     }
     
     func onConversionDataFail(_ error: any Error) {
+        print("appsflyer failed \(error)")
         AttributionManager.onAppflyerConversionDataFail(error)
     }
 }
