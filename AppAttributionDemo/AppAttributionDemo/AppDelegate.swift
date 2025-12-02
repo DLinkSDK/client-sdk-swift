@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // [Optional] you can set you project-applied custom deviceid
         // or use the device id we generate for you
         AttributionManager.setCustomDeviceId("your device id here")
+        // you can set your app's user id to associate the user info
+        AttributionManager.setUserId("your_user_id")
         // create your configuration
         // appleStoreId is your app id in AppleStore
         var configuration = AttributionConfiguration(accountId: "your_account_id", devToken: "your_dev_token", appleStoreId: "idxxxxxxx")
