@@ -8,7 +8,9 @@ target 'AppAttributionDemo' do
   use_frameworks!
 
   # Pods for AppAttributionDemo
-  pod 'AppAttribution', '~>3.0.2'
+  pod 'AppAttribution', '~>3.0.4'
+  # [Optional] if you want to support GoogleAdsOnDeviceConversion
+  pod 'AppAttribution_GoogleAdsOnDevice', '~>3.0.4'
   
   pod 'AppsFlyerFramework', '6.12.1'
 end

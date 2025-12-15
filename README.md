@@ -146,5 +146,18 @@ extension AppDelegate: AppsFlyerLibDelegate {
 
 ```
 
+## GoogleAdsOnDeviceConversion Support
+1. If you want to add GoogleAdsOnDeviceConversion support to dlink, add the podspec below
+```ruby
+pod 'AppAttribution_GoogleAdsOnDevice'
+```
+2. enable the feature before setup your configuration
+```swift
+import AppAttribution_GoogleAdsOnDevice
+
+AttributionManager.enableGoogleAdsOnDeviceConversion()
+```
+
+
 ## Check Detail APIs
 [API Documents](https://deeplink-dev-ios.s3.ap-southeast-1.amazonaws.com/ios-frameworks/AppAttribution/docs/documentation/appattribution/index.html)

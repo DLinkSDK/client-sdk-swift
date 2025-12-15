@@ -1,11 +1,14 @@
 PODS:
   - Alamofire (5.10.2)
-  - AppAttribution (3.0.2):
+  - AppAttribution (3.0.4):
     - Alamofire
     - CocoaAsyncSocket
     - DLinkAuthKit (>= 1.0.1)
     - MMKV
     - SweetSugar (>= 1.1.1)
+  - AppAttribution_GoogleAdsOnDevice (3.0.4):
+    - AppAttribution (~> 3.0.4)
+    - GoogleAdsOnDeviceConversion
   - AppsFlyerFramework (6.12.1):
     - AppsFlyerFramework/Main (= 6.12.1)
   - AppsFlyerFramework/Main (6.12.1)
@@ -13,13 +16,40 @@ PODS:
   - CryptoSwift (1.8.4)
   - DLinkAuthKit (1.0.1):
     - CryptoSwift
-  - MMKV (2.2.4):
-    - MMKVCore (~> 2.2.4)
-  - MMKVCore (2.2.4)
+  - GoogleAdsOnDeviceConversion (3.2.0):
+    - GoogleUtilities/Environment (~> 8.1)
+    - GoogleUtilities/Logger (~> 8.1)
+    - GoogleUtilities/Network (~> 8.1)
+    - nanopb (~> 3.30910.0)
+  - GoogleUtilities/Environment (8.1.0):
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Logger (8.1.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Network (8.1.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Privacy
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (8.1.0)":
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Privacy (8.1.0)
+  - GoogleUtilities/Reachability (8.1.0):
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Privacy
+  - MMKV (2.3.0):
+    - MMKVCore (~> 2.3.0)
+  - MMKVCore (2.3.0)
+  - nanopb (3.30910.0):
+    - nanopb/decode (= 3.30910.0)
+    - nanopb/encode (= 3.30910.0)
+  - nanopb/decode (3.30910.0)
+  - nanopb/encode (3.30910.0)
   - SweetSugar (1.1.1)
 
 DEPENDENCIES:
-  - AppAttribution (~> 3.0.2)
+  - AppAttribution (~> 3.0.4)
+  - AppAttribution_GoogleAdsOnDevice (~> 3.0.4)
   - AppsFlyerFramework (= 6.12.1)
 
 SPEC REPOS:
@@ -28,24 +58,32 @@ SPEC REPOS:
     - AppsFlyerFramework
     - CocoaAsyncSocket
     - CryptoSwift
+    - GoogleAdsOnDeviceConversion
+    - GoogleUtilities
     - MMKV
     - MMKVCore
+    - nanopb
     - SweetSugar
   https://github.com/DLinkSDK/deeplink-dev-specs.git:
     - AppAttribution
+    - AppAttribution_GoogleAdsOnDevice
     - DLinkAuthKit
 
 SPEC CHECKSUMS:
   Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
-  AppAttribution: e0fab865c0cdcc200b2ef7e93494281cc3b88f00
+  AppAttribution: d92e9550751bb35540984e0c893b79217b4d6889
+  AppAttribution_GoogleAdsOnDevice: 872370260ab92fddddca59760f10532063ede353
   AppsFlyerFramework: e29b63fc5441400a38a31c5501c1da500b9d53d0
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   CryptoSwift: e64e11850ede528a02a0f3e768cec8e9d92ecb90
   DLinkAuthKit: e9066f09131dff806fb0e107c779329012d64d70
-  MMKV: 1a8e7dbce7f9cad02c52e1b1091d07bd843aefaf
-  MMKVCore: f2dd4c9befea04277a55e84e7812f930537993df
+  GoogleAdsOnDeviceConversion: d68c69dd9581a0f5da02617b6f377e5be483970f
+  GoogleUtilities: 00c88b9a86066ef77f0da2fab05f65d7768ed8e1
+  MMKV: c953dbaac0da392c24b005e763c03ce2638b4ed7
+  MMKVCore: d078dce7d6586a888b2c2ef5343b6242678e3ee8
+  nanopb: fad817b59e0457d11a5dfbde799381cd727c1275
   SweetSugar: 40d60b273b866b8d69d177a62c45b9e4b93cb03c
 
-PODFILE CHECKSUM: 7e2e98bff7951c5c3d40d4b0848c0b554ce6dfed
+PODFILE CHECKSUM: 74970cf3d815de46f57c1059aa75f3c7c5ab3df3
 
 COCOAPODS: 1.16.2
