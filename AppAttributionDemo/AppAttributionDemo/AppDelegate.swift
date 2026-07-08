@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AttributionManager.enableGoogleAdsOnDeviceConversion()
         // create your configuration
         // appleStoreId is your app id in AppleStore
-        var configuration = AttributionConfiguration(accountId: "your_account_id", devToken: "your_dev_token", appleStoreId: "idxxxxxxx")
+        var configuration = AttributionConfiguration(appCode: "your_account_id", devToken: "your_dev_token", appleStoreId: "idxxxxxxx")
         // if you want to support appsflyerlib
         // setup adapter here
         configuration.appsFlyerAdapter = self

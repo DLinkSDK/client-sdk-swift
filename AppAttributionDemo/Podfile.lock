@@ -1,13 +1,13 @@
 PODS:
   - Alamofire (5.10.2)
-  - AppAttribution (3.0.4):
+  - AppAttribution (3.0.6):
     - Alamofire
     - CocoaAsyncSocket
     - DLinkAuthKit (>= 1.0.1)
     - MMKV
     - SweetSugar (>= 1.1.1)
-  - AppAttribution_GoogleAdsOnDevice (3.0.4):
-    - AppAttribution (~> 3.0.4)
+  - AppAttribution_GoogleAdsOnDevice (3.0.5):
+    - AppAttribution (~> 3.0.5)
     - GoogleAdsOnDeviceConversion
   - AppsFlyerFramework (6.12.1):
     - AppsFlyerFramework/Main (= 6.12.1)
@@ -48,8 +48,8 @@ PODS:
   - SweetSugar (1.1.1)
 
 DEPENDENCIES:
-  - AppAttribution (~> 3.0.4)
-  - AppAttribution_GoogleAdsOnDevice (~> 3.0.4)
+  - AppAttribution (~> 3.0.5)
+  - AppAttribution_GoogleAdsOnDevice (~> 3.0.5)
   - AppsFlyerFramework (= 6.12.1)
 
 SPEC REPOS:
@@ -71,8 +71,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
-  AppAttribution: d92e9550751bb35540984e0c893b79217b4d6889
-  AppAttribution_GoogleAdsOnDevice: 872370260ab92fddddca59760f10532063ede353
+  AppAttribution: cfe0fb718266df4ad55b722261409ebc105695d6
+  AppAttribution_GoogleAdsOnDevice: a3d538525d8141161c7896576bd2d4c7399a2456
   AppsFlyerFramework: e29b63fc5441400a38a31c5501c1da500b9d53d0
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   CryptoSwift: e64e11850ede528a02a0f3e768cec8e9d92ecb90
@@ -84,6 +84,6 @@ SPEC CHECKSUMS:
   nanopb: fad817b59e0457d11a5dfbde799381cd727c1275
   SweetSugar: 40d60b273b866b8d69d177a62c45b9e4b93cb03c
 
-PODFILE CHECKSUM: 74970cf3d815de46f57c1059aa75f3c7c5ab3df3
+PODFILE CHECKSUM: b07105b07d13a057817da37998b686b0e624c788
 
 COCOAPODS: 1.16.2
