@@ -1,45 +1,45 @@
 PODS:
-  - Alamofire (5.10.2)
-  - AppAttribution (3.0.6):
+  - Alamofire (5.11.2)
+  - AppAttribution (3.1.0):
     - Alamofire
     - CocoaAsyncSocket
-    - DLinkAuthKit (>= 1.0.1)
+    - DLinkAuthKit (>= 1.1.0)
     - MMKV
     - SweetSugar (>= 1.1.1)
-  - AppAttribution_GoogleAdsOnDevice (3.0.5):
-    - AppAttribution (~> 3.0.5)
+  - AppAttribution_GoogleAdsOnDevice (3.1.0):
+    - AppAttribution (~> 3.1.0)
     - GoogleAdsOnDeviceConversion
   - AppsFlyerFramework (6.12.1):
     - AppsFlyerFramework/Main (= 6.12.1)
   - AppsFlyerFramework/Main (6.12.1)
   - CocoaAsyncSocket (7.6.5)
   - CryptoSwift (1.8.4)
-  - DLinkAuthKit (1.0.1):
-    - CryptoSwift
-  - GoogleAdsOnDeviceConversion (3.2.0):
+  - DLinkAuthKit (1.1.0):
+    - CryptoSwift (~> 1.8.4)
+  - GoogleAdsOnDeviceConversion (3.6.1):
     - GoogleUtilities/Environment (~> 8.1)
     - GoogleUtilities/Logger (~> 8.1)
     - GoogleUtilities/Network (~> 8.1)
     - nanopb (~> 3.30910.0)
-  - GoogleUtilities/Environment (8.1.0):
+  - GoogleUtilities/Environment (8.1.2):
     - GoogleUtilities/Privacy
-  - GoogleUtilities/Logger (8.1.0):
+  - GoogleUtilities/Logger (8.1.2):
     - GoogleUtilities/Environment
     - GoogleUtilities/Privacy
-  - GoogleUtilities/Network (8.1.0):
+  - GoogleUtilities/Network (8.1.2):
     - GoogleUtilities/Logger
     - "GoogleUtilities/NSData+zlib"
     - GoogleUtilities/Privacy
     - GoogleUtilities/Reachability
-  - "GoogleUtilities/NSData+zlib (8.1.0)":
+  - "GoogleUtilities/NSData+zlib (8.1.2)":
     - GoogleUtilities/Privacy
-  - GoogleUtilities/Privacy (8.1.0)
-  - GoogleUtilities/Reachability (8.1.0):
+  - GoogleUtilities/Privacy (8.1.2)
+  - GoogleUtilities/Reachability (8.1.2):
     - GoogleUtilities/Logger
     - GoogleUtilities/Privacy
-  - MMKV (2.3.0):
-    - MMKVCore (~> 2.3.0)
-  - MMKVCore (2.3.0)
+  - MMKV (2.4.0):
+    - MMKVCore (~> 2.4.0)
+  - MMKVCore (2.4.0)
   - nanopb (3.30910.0):
     - nanopb/decode (= 3.30910.0)
     - nanopb/encode (= 3.30910.0)
@@ -48,8 +48,8 @@ PODS:
   - SweetSugar (1.1.1)
 
 DEPENDENCIES:
-  - AppAttribution (~> 3.0.5)
-  - AppAttribution_GoogleAdsOnDevice (~> 3.0.5)
+  - AppAttribution (~> 3.1.0)
+  - AppAttribution_GoogleAdsOnDevice (~> 3.1.0)
   - AppsFlyerFramework (= 6.12.1)
 
 SPEC REPOS:
@@ -70,20 +70,20 @@ SPEC REPOS:
     - DLinkAuthKit
 
 SPEC CHECKSUMS:
-  Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
-  AppAttribution: cfe0fb718266df4ad55b722261409ebc105695d6
-  AppAttribution_GoogleAdsOnDevice: a3d538525d8141161c7896576bd2d4c7399a2456
+  Alamofire: 400275dd1c6d87d95a041861d2a59da4b520a203
+  AppAttribution: 07aed710d9f384d2ab9e44401bb629636bec38e0
+  AppAttribution_GoogleAdsOnDevice: 74b2f5dbc8da82e32baf0cbec27aa9fa269abfba
   AppsFlyerFramework: e29b63fc5441400a38a31c5501c1da500b9d53d0
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   CryptoSwift: e64e11850ede528a02a0f3e768cec8e9d92ecb90
-  DLinkAuthKit: e9066f09131dff806fb0e107c779329012d64d70
-  GoogleAdsOnDeviceConversion: d68c69dd9581a0f5da02617b6f377e5be483970f
-  GoogleUtilities: 00c88b9a86066ef77f0da2fab05f65d7768ed8e1
-  MMKV: c953dbaac0da392c24b005e763c03ce2638b4ed7
-  MMKVCore: d078dce7d6586a888b2c2ef5343b6242678e3ee8
+  DLinkAuthKit: 10b94e73fea7835ed8684ceff13306c284d0bc95
+  GoogleAdsOnDeviceConversion: e3b71da24ff4cf01cf520756ac1c2b93c07b86ff
+  GoogleUtilities: 766ace00c6b10d8148408f329d10c4f051931850
+  MMKV: 86859fdfa2b0b21db1fd6e48788474a6416a2c77
+  MMKVCore: 3d16ce9f7d411e135020915fde98a056859a1efa
   nanopb: fad817b59e0457d11a5dfbde799381cd727c1275
   SweetSugar: 40d60b273b866b8d69d177a62c45b9e4b93cb03c
 
-PODFILE CHECKSUM: b07105b07d13a057817da37998b686b0e624c788
+PODFILE CHECKSUM: f11ab24ceff1a0f3b6c708b211b193b4281e58e8
 
 COCOAPODS: 1.16.2

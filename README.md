@@ -161,3 +161,21 @@ AttributionManager.enableGoogleAdsOnDeviceConversion()
 
 ## Check Detail APIs
 [API Documents](https://deeplink-dev-ios.s3.ap-southeast-1.amazonaws.com/ios-frameworks/AppAttribution/docs/documentation/appattribution/index.html)
+
+## FAQ
+1. Deployment Target out of supported range:
+    when using new xcode, sometimes it will complain like:
+    `The iOS Simulator deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 13.0, but the range of supported deployment target versions is 15.0 to 27.0.x.`
+    add the post install script code in your Podfile:
+    ```
+    post_install do |installer|
+        installer.pods_project.targets.each do |target|
+            target.build_configurations.each do |config|
+                config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
+            end
+        end
+    end
+    ```
+   
+
+
